@@ -1,5 +1,5 @@
 package us.dontcareabout.pickRed.client;
-
+/*
 import com.google.gwt.user.client.Window;
 
 import us.dontcareabout.gwt.client.GFEP;
@@ -22,3 +22,4 @@ public class PickRedEP extends GFEP {
 	protected void start() {
 	}
 }
+*/
