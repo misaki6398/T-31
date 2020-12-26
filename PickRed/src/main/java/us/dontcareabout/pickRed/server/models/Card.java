@@ -2,13 +2,13 @@ package us.dontcareabout.pickRed.server.models;
 
 import us.dontcareabout.pickRed.server.enums.Suits;
 
-public class PlayCard {
+public class Card {
 
 	private int deck;
 
 	private Suits suit;
 
-	public PlayCard(int deck, Suits suit) {
+	public Card(int deck, Suits suit) {
 		this.deck = deck;
 		this.suit = suit;
 	}	
