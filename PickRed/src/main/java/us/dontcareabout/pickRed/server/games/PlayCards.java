@@ -8,7 +8,7 @@ import us.dontcareabout.pickRed.server.enums.Suits;
 import us.dontcareabout.pickRed.server.models.Card;
 
 public class PlayCards {
-	public List<Card> cards = new ArrayList<Card>();
+	protected List<Card> cards = new ArrayList<Card>();
 	
 	/** 
 	 * 新的一組排序好的撲克牌
@@ -20,6 +20,15 @@ public class PlayCards {
 				cards.add(card);
 			}
 		}
+	}
+	
+	/** 
+	 * 拿取頂部的牌
+	 */
+	public Card takeCardOnTop() {
+		Card card = this.cards.get(0);
+		this.cards.remove(0);
+		return card;
 	}
 
 	

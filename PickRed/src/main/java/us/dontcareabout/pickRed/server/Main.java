@@ -2,39 +2,16 @@ package us.dontcareabout.pickRed.server;
 
 import us.dontcareabout.pickRed.server.games.PickRed;
 import us.dontcareabout.pickRed.server.models.Card;
-import us.dontcareabout.pickRed.server.models.Player;
+import us.dontcareabout.pickRed.server.players.Player;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
+	
+		int playerNum = 4;
 		
-		PickRed pickRed = new PickRed(3);
+		PickRed pickRed = new PickRed(playerNum);
 		
-		int cardCount = 0;
-		
-		for (Player player : pickRed.players) {
-			System.out.println("==== Player ====");
-			for (Card card : player.getCardOnhand()) {
-				System.out.println(card.getSuit() + ":" + card.getDeck());
-				cardCount++;
-			}
-		}
-		
-		System.out.println("==== Card on desktop ====");
-		for (Card card : pickRed.cards) {
-			System.out.println(card.getSuit() + ":" + card.getDeck());
-			cardCount++;
-		}
-		
-		System.out.println(cardCount);
-		
-//		System.out.println("=============shuffle==============");
-//		
-//		playCards.shuffle();
-//		
-//		for (PlayCard card : playCards.cards) {
-//			System.out.println(card.getSuit() + ":" + card.getDeck());
-//		}
-//		
-//		System.out.println(playCards.cards.size());
+		pickRed.start();
+
 	}
 }
