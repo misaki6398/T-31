@@ -6,7 +6,7 @@ import java.util.List;
 import us.dontcareabout.pickRed.server.models.Card;
 
 public class Player {
-	private List<Card> cardOnhand = new ArrayList<Card>();
+	private List<Card> cardOnhand = new ArrayList<Card>();	
 	
 	public void addCardOnHand(Card card) {
 		cardOnhand.add(card);
@@ -14,14 +14,6 @@ public class Player {
 	
 	public List<Card> getCardOnhand() {
 		return this.cardOnhand;
-	}
-	
-	public void showCardOnhand() {
-		int cardNum = 1;
-		for (Card card : this.cardOnhand) {			
-			System.out.println(cardNum + ":" + card.getSuit() + ":" + card.getDeck());	
-			cardNum++;
-		}
 	}
 	
 	public Card takeOneCard(int num) {
@@ -32,4 +24,17 @@ public class Player {
 		this.cardOnhand.remove(num);
 		return card;
 	}
+	
+	
+	/** 
+	 * demo 用的
+	 */
+	public void showCardOnhand() {
+		int cardNum = 1;
+		for (Card card : this.cardOnhand) {			
+			System.out.println(cardNum + ":" + card.getSuit() + ":" + card.getDeck());	
+			cardNum++;
+		}
+	}
+	
 }

@@ -1,5 +1,8 @@
 package us.dontcareabout.pickRed.server.enums;
 
 public enum Suits {
-	spade, heart, diamond, club
+	spade, // 黑桃
+	heart, // 紅心 
+	diamond, // 方塊 
+	club // 梅花
 }
