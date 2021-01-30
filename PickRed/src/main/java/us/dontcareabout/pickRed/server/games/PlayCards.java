@@ -48,7 +48,7 @@ public class PlayCards {
 	    this.cards = shuffledCards;
 	}
 	
-	protected List<Card> getCards(){
+	public List<Card> getCards(){
 		return this.cards;
 	}
 	
